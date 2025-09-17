@@ -41,7 +41,7 @@ This is the third paragraph. Wrap each paragraph with the paragraph tag to tell 
         <li>Flip and cook the other side.</li>
         <li>Serve and enjoy!</li>
     </ol>
-    My favorite recipe:
+    My favorite recipe: Potato Fry
     <ol id="wd-potato-fry">
     <li>Wash and peel the potatoes.</li>
     <li>Cut them into small cubes.</li>
@@ -271,11 +271,11 @@ Your favorite books (in no particular order)
 
 <h4>Anchor tag</h4>
 Please
-<a href="https://www.lipsum.com" id="wd-lipsum">click here</a>
+<a href="https://www.lipsum.com" id="wd-lipsum"> click here </a>
 to get dummy text<br/>
 
 Please
-<a href="https://github.com/dineshbachchani1234" id="wd-github">click here</a>
+<a href="https://github.com/dineshbachchani1234/kambaz-next-js" id="wd-github"> click here </a>
 to get my github repository<br/>
 
       </div>
