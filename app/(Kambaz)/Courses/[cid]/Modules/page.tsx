@@ -22,6 +22,34 @@ export default function Modules() {
                 </li>
               </ul>
             </li>
+            <li className="wd-lesson">
+              <span className="wd-title">Reading</span>
+              <ul className="wd-content">
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 1
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 2
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 3
+                </li>
+              </ul>
+            </li>
+            <li className="wd-lesson">
+              <span className="wd-title">Slides</span>
+              <ul className="wd-content">
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 1
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 2
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 3
+                </li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li className="wd-module">
@@ -42,6 +70,34 @@ export default function Modules() {
                 </li>
               </ul>
             </li>
+            <li className="wd-lesson">
+              <span className="wd-title">Reading</span>
+              <ul className="wd-content">
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 4
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 5
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 6
+                </li>
+              </ul>
+            </li>
+            <li className="wd-lesson">
+              <span className="wd-title">Slides</span>
+              <ul className="wd-content">
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 4
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 5
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 6
+                </li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li className="wd-module">
@@ -59,6 +115,34 @@ export default function Modules() {
                 </li>
                 <li className="wd-content-item">
                   Build simple interactive web pages combining HTML, CSS, and JS
+                </li>
+              </ul>
+            </li>
+            <li className="wd-lesson">
+              <span className="wd-title">Reading</span>
+              <ul className="wd-content">
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 7
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 8
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 9
+                </li>
+              </ul>
+            </li>
+            <li className="wd-lesson">
+              <span className="wd-title">Slides</span>
+              <ul className="wd-content">
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 7
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 8
+                </li>
+                <li className="wd-content-item">
+                  Full Stack Developer - Chapter 9
                 </li>
               </ul>
             </li>

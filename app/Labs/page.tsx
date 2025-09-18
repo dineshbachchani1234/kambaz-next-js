@@ -25,6 +25,15 @@ export default function Labs() {
           </Link>{" "}
         </li>
       </ul>
+      Github:{" "}
+      <a
+        href="https://github.com/dineshbachchani1234/kambaz-next-js"
+        id="wd-github"
+      >
+        {" "}
+        click here{" "}
+      </a>
+      to get my github repository
     </div>
   );
 }
