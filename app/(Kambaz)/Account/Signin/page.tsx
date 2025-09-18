@@ -13,6 +13,7 @@ export default function Signin() {
         placeholder="password"
         type="password"
         className="wd-password"
+        defaultValue="webd"
       />{" "}
       <br />
       <Link href="/Dashboard" id="wd-signin-btn">
