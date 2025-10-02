@@ -36,6 +36,11 @@ export default function CourseNavigation() {
         className={`list-group-item border-0 ${
           pathname.includes('/Quizzes') ? 'active' : 'text-danger'
         }`}> Quizzes </Link>
+
+<Link href="/Courses/1234/Grades" id="wd-course-grades-link"
+        className={`list-group-item border-0 ${
+          pathname.includes('/Grades') ? 'active' : 'text-danger'
+        }`}> Grades </Link>
       
       <Link href="/Courses/1234/People/Table" id="wd-course-people-link"
         className={`list-group-item border-0 ${

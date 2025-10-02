@@ -54,10 +54,10 @@ export default function Assignments() {
                   <BiTask className="me-3 mt-1 text-success" />
                   <div>
                     <Link href="/Courses/1234/Assignments/123" className="text-decoration-none text-dark fw-bold">
-                      A1 - ENV + HTML
+                      A1
                     </Link>
                     <div className="small text-muted">
-                      Multiple Modules | <strong>Not available until</strong> May 6 at 12:00am |
+                      <span className="text-danger">Multiple Modules</span> | <strong>Not available until</strong> May 6 at 12:00am |
                     </div>
                     <div className="small text-muted">
                       <strong>Due</strong> May 13 at 11:59pm | 100 pts
@@ -78,10 +78,10 @@ export default function Assignments() {
                   <BiTask className="me-3 mt-1 text-success" />
                   <div>
                     <Link href="/Courses/1234/Assignments/124" className="text-decoration-none text-dark fw-bold">
-                      A2 - CSS + BOOTSTRAP
+                      A2
                     </Link>
                     <div className="small text-muted">
-                      Multiple Modules | <strong>Not available until</strong> May 13 at 12:00am |
+                    <span className="text-danger">Multiple Modules</span> | <strong>Not available until</strong> May 13 at 12:00am |
                     </div>
                     <div className="small text-muted">
                       <strong>Due</strong> May 20 at 11:59pm | 100 pts
@@ -102,10 +102,10 @@ export default function Assignments() {
                   <BiTask className="me-3 mt-1 text-success" />
                   <div>
                     <Link href="/Courses/1234/Assignments/125" className="text-decoration-none text-dark fw-bold">
-                      A3 - JAVASCRIPT + REACT
+                      A3
                     </Link>
                     <div className="small text-muted">
-                      Multiple Modules | <strong>Not available until</strong> May 20 at 12:00am |
+                    <span className="text-danger">Multiple Modules</span> | <strong>Not available until</strong> May 20 at 12:00am |
                     </div>
                     <div className="small text-muted">
                       <strong>Due</strong> May 27 at 11:59pm | 100 pts

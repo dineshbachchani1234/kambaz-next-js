@@ -10,13 +10,11 @@ export default function Signin() {
           type="text"
           placeholder="username"
           className="mb-2"
-          defaultValue="alice"
         />
         <Form.Control
           type="password"
           placeholder="password"
           className="mb-3"
-          defaultValue="123"
         />
         <Link href="/Dashboard" className="text-decoration-none">
           <Button variant="primary" className="w-100 mb-2">

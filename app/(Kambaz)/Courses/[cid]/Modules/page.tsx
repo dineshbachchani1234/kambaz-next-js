@@ -23,7 +23,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> LEARNING OBJECTIVES <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Introduction to the course
@@ -57,7 +57,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> Reading <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Full Stack Developer - Chapter 1
@@ -91,7 +91,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> Slides <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Full Stack Developer - Chapter 1
@@ -134,7 +134,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> LEARNING OBJECTIVES <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Learn CSS fundamentals (selectors, properties, colors, fonts)
@@ -168,7 +168,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> Reading <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Full Stack Developer - Chapter 4
@@ -202,7 +202,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> Slides <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Full Stack Developer - Chapter 4
@@ -245,7 +245,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> LEARNING OBJECTIVES <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Dive into JavaScript basics (variables, types, operators, functions)
@@ -279,7 +279,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> Reading <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Full Stack Developer - Chapter 7
@@ -313,7 +313,7 @@ export default function Modules() {
               <span className="wd-title">
                 <BsGripVertical className="me-2 fs-3" /> Slides <LessonControlButtons />
               </span>
-              <div style={{ paddingLeft: "60px" }} className="mt-2">
+              <div style={{ paddingLeft: "20px" }} className="mt-2">
                 <div className="d-flex justify-content-between align-items-center py-2">
                   <span>
                     <BsGripVertical className="me-2" /> Full Stack Developer - Chapter 7
