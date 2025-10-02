@@ -21,9 +21,11 @@ export default function Signup() {
           placeholder="verify password"
           className="mb-3"
         />
-        <Button variant="primary" className="w-100 mb-2" as={Link} href="/Account/Profile">
-          Signup
-        </Button>
+       <Link href="/Account/Profile" className="text-decoration-none">
+  <Button variant="primary" className="w-100 mb-2">
+    Signup
+  </Button>
+</Link>
         <Link href="/Account/Signin" className="text-decoration-none">
           Signin
         </Link>
