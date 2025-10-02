@@ -36,7 +36,7 @@ export default function PeopleTable() {
               <span className="wd-last-name">Wayne</span>
             </td>
             <td className="wd-login-id">001234562S</td>
-            <td className="wd-section">S101</td>
+            <td className="wd-section">S102</td>
             <td className="wd-role">STUDENT</td>
             <td className="wd-last-activity">2020-11-02</td>
             <td className="wd-total-activity">15:32:43</td>
@@ -45,11 +45,11 @@ export default function PeopleTable() {
           <tr>
             <td className="wd-full-name text-nowrap">
               <FaUserCircle className="me-2 fs-1 text-secondary" />
-              <span className="wd-first-name">Steve</span>{" "}
-              <span className="wd-last-name">Rogers</span>
+              <span className="wd-first-name">Arun</span>{" "}
+              <span className="wd-last-name">Rampal</span>
             </td>
             <td className="wd-login-id">001234563S</td>
-            <td className="wd-section">S101</td>
+            <td className="wd-section">S103</td>
             <td className="wd-role">STUDENT</td>
             <td className="wd-last-activity">2020-10-02</td>
             <td className="wd-total-activity">23:32:43</td>
@@ -62,7 +62,7 @@ export default function PeopleTable() {
               <span className="wd-last-name">Romanoff</span>
             </td>
             <td className="wd-login-id">001234564S</td>
-            <td className="wd-section">S101</td>
+            <td className="wd-section">S104</td>
             <td className="wd-role">TA</td>
             <td className="wd-last-activity">2020-11-05</td>
             <td className="wd-total-activity">13:23:34</td>
@@ -71,11 +71,11 @@ export default function PeopleTable() {
           <tr>
             <td className="wd-full-name text-nowrap">
               <FaUserCircle className="me-2 fs-1 text-secondary" />
-              <span className="wd-first-name">Thor</span>{" "}
-              <span className="wd-last-name">Odinson</span>
+              <span className="wd-first-name">MS</span>{" "}
+              <span className="wd-last-name">Dhoni</span>
             </td>
             <td className="wd-login-id">001234565S</td>
-            <td className="wd-section">S101</td>
+            <td className="wd-section">S105</td>
             <td className="wd-role">STUDENT</td>
             <td className="wd-last-activity">2020-12-01</td>
             <td className="wd-total-activity">11:22:33</td>
@@ -84,11 +84,11 @@ export default function PeopleTable() {
           <tr>
             <td className="wd-full-name text-nowrap">
               <FaUserCircle className="me-2 fs-1 text-secondary" />
-              <span className="wd-first-name">Bruce</span>{" "}
-              <span className="wd-last-name">Banner</span>
+              <span className="wd-first-name">Virat</span>{" "}
+              <span className="wd-last-name">Kohli</span>
             </td>
             <td className="wd-login-id">001234566S</td>
-            <td className="wd-section">S101</td>
+            <td className="wd-section">S106</td>
             <td className="wd-role">STUDENT</td>
             <td className="wd-last-activity">2020-12-01</td>
             <td className="wd-total-activity">22:33:44</td>
