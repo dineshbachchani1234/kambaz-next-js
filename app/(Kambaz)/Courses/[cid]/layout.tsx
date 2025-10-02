@@ -19,13 +19,22 @@ export default function CoursesLayout({
       return 'Home';
     }
     if (pathname.includes('/Modules')) return 'Modules';
-    if (pathname.includes('/Assignments')) return 'Assignments';
+    
+    // Check for assignments with ID
+    if (pathname.includes('/Assignments')) {
+      const match = pathname.match(/\/Assignments\/([^\/]+)/);
+      if (match && match[1]) {
+        return `Assignments > ${match[1]}`;
+      }
+      return 'Assignments';
+    }
+    
     if (pathname.includes('/Grades')) return 'Grades';
     if (pathname.includes('/Piazza')) return 'Piazza';
     if (pathname.includes('/Zoom')) return 'Zoom';
     if (pathname.includes('/Quizzes')) return 'Quizzes';
     if (pathname.includes('/People')) return 'People';
-    return 'Home'; // default to Home instead of Modules
+    return 'Home';
   };
   
   return (
