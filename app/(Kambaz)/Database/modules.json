@@ -1,624 +1,624 @@
 [
   {
     "_id": "M101",
-    "name": "Introduction to React",
-    "description": "Basic principles of React and component-based architecture.",
-    "course": "CS1234",
+    "name": "Introduction to Rocket Propulsion",
+    "description": "Basic principles of rocket propulsion and rocket engines.",
+    "course": "RS101",
     "lessons": [
       {
         "_id": "L101",
-        "name": "React Fundamentals",
-        "description": "Understanding JSX, components, and props.",
+        "name": "History of Rocketry",
+        "description": "A brief history of rocketry and space exploration.",
         "module": "M101"
       },
       {
         "_id": "L102",
-        "name": "State and Lifecycle",
-        "description": "Managing component state and lifecycle methods.",
+        "name": "Rocket Propulsion Fundamentals",
+        "description": "Basic principles of rocket propulsion.",
         "module": "M101"
       },
       {
         "_id": "L103",
-        "name": "Event Handling",
-        "description": "Handling user interactions in React.",
+        "name": "Rocket Engine Types",
+        "description": "Overview of different types of rocket engines.",
         "module": "M101"
       }
     ]
   },
   {
     "_id": "M102",
-    "name": "React Hooks",
-    "description": "Modern React development with hooks.",
-    "course": "CS1234",
+    "name": "Fuel and Combustion",
+    "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+    "course": "RS101",
     "lessons": [
       {
         "_id": "L201",
-        "name": "useState and useEffect",
-        "description": "Managing state and side effects with hooks.",
+        "name": "Rocket Fuel",
+        "description": "Overview of different types of rocket fuels.",
         "module": "M102"
       },
       {
         "_id": "L202",
-        "name": "Custom Hooks",
-        "description": "Creating reusable custom hooks.",
+        "name": "Combustion Processes",
+        "description": "Understanding combustion processes and efficiency.",
         "module": "M102"
       },
       {
         "_id": "L203",
-        "name": "Context API",
-        "description": "Global state management with Context.",
+        "name": "Combustion Instability",
+        "description": "Understanding combustion instability and mitigation.",
         "module": "M102"
       }
     ]
   },
   {
     "_id": "M103",
-    "name": "Advanced React Patterns",
-    "description": "Advanced patterns and performance optimization.",
-    "course": "CS1234",
+    "name": "Nozzle Design",
+    "description": "Principles of rocket nozzle design and performance optimization.",
+    "course": "RS101",
     "lessons": [
       {
         "_id": "L301",
-        "name": "React Router",
-        "description": "Implementing navigation in React apps.",
+        "name": "Nozzle Design",
+        "description": "Overview of different types of rocket nozzles.",
         "module": "M103"
       },
       {
         "_id": "L302",
-        "name": "Performance Optimization",
-        "description": "Memo, useMemo, and useCallback techniques.",
+        "name": "Nozzle Performance",
+        "description": "Understanding nozzle performance and efficiency.",
         "module": "M103"
       },
       {
         "_id": "L303",
-        "name": "Testing React Components",
-        "description": "Unit and integration testing strategies.",
+        "name": "Nozzle Optimization",
+        "description": "Optimizing nozzle design for specific applications.",
         "module": "M103"
       }
     ]
   },
   {
     "_id": "M201",
-    "name": "Cloud Computing Fundamentals",
-    "description": "Introduction to cloud platforms and services.",
-    "course": "CS6789",
+    "name": "Fundamentals of Aerodynamics",
+    "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+    "course": "RS102",
     "lessons": [
       {
         "_id": "L401",
-        "name": "Cloud Computing Basics",
-        "description": "Understanding IaaS, PaaS, and SaaS.",
+        "name": "Fluid Dynamics",
+        "description": "Understanding fluid flow principles.",
         "module": "M201"
       },
       {
         "_id": "L402",
-        "name": "Cloud Architecture",
-        "description": "Designing scalable cloud solutions.",
+        "name": "Airfoil Design",
+        "description": "Principles of airfoil design.",
         "module": "M201"
       },
       {
         "_id": "L403",
-        "name": "Cloud Service Models",
-        "description": "Comparing different cloud service providers.",
+        "name": "Lift and Drag",
+        "description": "Understanding lift and drag forces.",
         "module": "M201"
       }
     ]
   },
   {
     "_id": "M202",
-    "name": "AWS Services",
-    "description": "Core AWS services and deployment strategies.",
-    "course": "CS6789",
+    "name": "Subsonic and Supersonic Flow",
+    "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+    "course": "RS102",
     "lessons": [
       {
         "_id": "L501",
-        "name": "EC2 and S3",
-        "description": "Virtual machines and object storage.",
+        "name": "Subsonic Flow",
+        "description": "Characteristics of subsonic flow.",
         "module": "M202"
       },
       {
         "_id": "L502",
-        "name": "Lambda and Serverless",
-        "description": "Building serverless applications.",
+        "name": "Supersonic Flow",
+        "description": "Characteristics of supersonic flow.",
         "module": "M202"
       },
       {
         "_id": "L503",
-        "name": "RDS and DynamoDB",
-        "description": "Managed database services.",
+        "name": "Shock Waves",
+        "description": "Understanding shock wave formation.",
         "module": "M202"
       }
     ]
   },
   {
     "_id": "M203",
-    "name": "Cloud Security",
-    "description": "Security best practices in cloud environments.",
-    "course": "CS6789",
+    "name": "Aerodynamic Heating",
+    "description": "Study of aerodynamic heating and thermal protection systems.",
+    "course": "RS102",
     "lessons": [
       {
         "_id": "L601",
-        "name": "IAM and Access Control",
-        "description": "Managing user permissions and roles.",
+        "name": "Heat Transfer",
+        "description": "Principles of heat transfer.",
         "module": "M203"
       },
       {
         "_id": "L602",
-        "name": "Encryption and Compliance",
-        "description": "Data protection and regulatory requirements.",
+        "name": "Thermal Protection",
+        "description": "Thermal protection system design.",
         "module": "M203"
       },
       {
         "_id": "L603",
-        "name": "Security Monitoring",
-        "description": "Detecting and responding to threats.",
+        "name": "Re-entry Physics",
+        "description": "Understanding re-entry heating.",
         "module": "M203"
       }
     ]
   },
   {
     "_id": "M301",
-    "name": "AI Fundamentals",
-    "description": "Introduction to artificial intelligence concepts.",
-    "course": "CS7890",
+    "name": "Spacecraft Structural Design",
+    "description": "Fundamentals of designing spacecraft structures and materials selection.",
+    "course": "RS103",
     "lessons": [
       {
         "_id": "L701",
-        "name": "Introduction to AI",
-        "description": "History and applications of AI.",
+        "name": "Structural Materials",
+        "description": "Materials used in spacecraft construction.",
         "module": "M301"
       },
       {
         "_id": "L702",
-        "name": "Search Algorithms",
-        "description": "BFS, DFS, and A* algorithms.",
+        "name": "Load Analysis",
+        "description": "Analyzing structural loads.",
         "module": "M301"
       },
       {
         "_id": "L703",
-        "name": "Knowledge Representation",
-        "description": "Logic and reasoning systems.",
+        "name": "Design Optimization",
+        "description": "Optimizing structural design.",
         "module": "M301"
       }
     ]
   },
   {
     "_id": "M302",
-    "name": "Machine Learning Basics",
-    "description": "Supervised and unsupervised learning algorithms.",
-    "course": "CS7890",
+    "name": "Orbital Mechanics",
+    "description": "Understanding orbital dynamics and mission planning.",
+    "course": "RS103",
     "lessons": [
       {
         "_id": "L801",
-        "name": "Supervised Learning",
-        "description": "Classification and regression techniques.",
+        "name": "Orbital Elements",
+        "description": "Understanding orbital parameters.",
         "module": "M302"
       },
       {
         "_id": "L802",
-        "name": "Unsupervised Learning",
-        "description": "Clustering and dimensionality reduction.",
+        "name": "Orbital Maneuvers",
+        "description": "Planning orbital transfers.",
         "module": "M302"
       },
       {
         "_id": "L803",
-        "name": "Model Evaluation",
-        "description": "Cross-validation and performance metrics.",
+        "name": "Mission Design",
+        "description": "Designing space missions.",
         "module": "M302"
       }
     ]
   },
   {
     "_id": "M303",
-    "name": "AI Ethics",
-    "description": "Ethical considerations in AI development.",
-    "course": "CS7890",
+    "name": "Spacecraft Systems Engineering",
+    "description": "Overview of spacecraft systems and subsystems engineering.",
+    "course": "RS103",
     "lessons": [
       {
         "_id": "L901",
-        "name": "Bias and Fairness",
-        "description": "Identifying and mitigating algorithmic bias.",
+        "name": "Power Systems",
+        "description": "Spacecraft power generation.",
         "module": "M303"
       },
       {
         "_id": "L902",
-        "name": "Privacy Concerns",
-        "description": "Data protection in AI systems.",
+        "name": "Communication Systems",
+        "description": "Spacecraft communication technologies.",
         "module": "M303"
       },
       {
         "_id": "L903",
-        "name": "AI Governance",
-        "description": "Regulatory frameworks and accountability.",
+        "name": "Thermal Control",
+        "description": "Managing spacecraft temperature.",
         "module": "M303"
       }
     ]
   },
   {
     "_id": "M401",
-    "name": "Database Design",
-    "description": "Relational database design principles.",
-    "course": "CS5678",
+    "name": "Organic Chemistry Fundamentals",
+    "description": "Introduction to organic compounds and reactions.",
+    "course": "RS104",
     "lessons": [
       {
         "_id": "L1001",
-        "name": "ER Modeling",
-        "description": "Entity-relationship diagrams.",
+        "name": "Hydrocarbons",
+        "description": "Study of alkanes, alkenes, and alkynes.",
         "module": "M401"
       },
       {
         "_id": "L1002",
-        "name": "Normalization",
-        "description": "Database normalization techniques.",
+        "name": "Functional Groups",
+        "description": "Understanding organic functional groups.",
         "module": "M401"
       },
       {
         "_id": "L1003",
-        "name": "Schema Design",
-        "description": "Creating efficient database schemas.",
+        "name": "Stereochemistry",
+        "description": "3D structure of organic molecules.",
         "module": "M401"
       }
     ]
   },
   {
     "_id": "M402",
-    "name": "SQL Mastery",
-    "description": "Advanced SQL queries and optimization.",
-    "course": "CS5678",
+    "name": "Organic Reactions",
+    "description": "Mechanisms and types of organic reactions.",
+    "course": "RS104",
     "lessons": [
       {
         "_id": "L1101",
-        "name": "Complex Queries",
-        "description": "Joins, subqueries, and window functions.",
+        "name": "Substitution Reactions",
+        "description": "SN1 and SN2 mechanisms.",
         "module": "M402"
       },
       {
         "_id": "L1102",
-        "name": "Query Optimization",
-        "description": "Indexes and execution plans.",
+        "name": "Elimination Reactions",
+        "description": "E1 and E2 mechanisms.",
         "module": "M402"
       },
       {
         "_id": "L1103",
-        "name": "Stored Procedures",
-        "description": "Writing efficient database procedures.",
+        "name": "Addition Reactions",
+        "description": "Reactions with double and triple bonds.",
         "module": "M402"
       }
     ]
   },
   {
     "_id": "M403",
-    "name": "NoSQL Databases",
-    "description": "MongoDB, Redis, and document databases.",
-    "course": "CS5678",
+    "name": "Organic Synthesis",
+    "description": "Techniques for synthesizing organic compounds.",
+    "course": "RS104",
     "lessons": [
       {
         "_id": "L1201",
-        "name": "Document Databases",
-        "description": "Working with MongoDB.",
+        "name": "Retrosynthetic Analysis",
+        "description": "Planning organic synthesis routes.",
         "module": "M403"
       },
       {
         "_id": "L1202",
-        "name": "Key-Value Stores",
-        "description": "Redis for caching and real-time data.",
+        "name": "Protecting Groups",
+        "description": "Using protecting groups in synthesis.",
         "module": "M403"
       },
       {
         "_id": "L1203",
-        "name": "Graph Databases",
-        "description": "Neo4j and relationship-based data.",
+        "name": "Multi-step Synthesis",
+        "description": "Complex synthesis strategies.",
         "module": "M403"
       }
     ]
   },
   {
     "_id": "M501",
-    "name": "Supervised Learning",
-    "description": "Regression and classification algorithms.",
-    "course": "CS3456",
+    "name": "Coordination Chemistry",
+    "description": "Study of metal complexes and coordination compounds.",
+    "course": "RS105",
     "lessons": [
       {
         "_id": "L1301",
-        "name": "Linear Regression",
-        "description": "Predicting continuous values.",
+        "name": "Coordination Complexes",
+        "description": "Structure of coordination compounds.",
         "module": "M501"
       },
       {
         "_id": "L1302",
-        "name": "Logistic Regression",
-        "description": "Binary classification techniques.",
+        "name": "Ligand Theory",
+        "description": "Understanding ligands and bonding.",
         "module": "M501"
       },
       {
         "_id": "L1303",
-        "name": "Decision Trees",
-        "description": "Tree-based classification methods.",
+        "name": "Crystal Field Theory",
+        "description": "Electronic structure of complexes.",
         "module": "M501"
       }
     ]
   },
   {
     "_id": "M502",
-    "name": "Unsupervised Learning",
-    "description": "Clustering and dimensionality reduction.",
-    "course": "CS3456",
+    "name": "Bonding Theories",
+    "description": "Advanced bonding theories in inorganic chemistry.",
+    "course": "RS105",
     "lessons": [
       {
         "_id": "L1401",
-        "name": "K-Means Clustering",
-        "description": "Grouping similar data points.",
+        "name": "Molecular Orbital Theory",
+        "description": "MO diagrams for inorganic compounds.",
         "module": "M502"
       },
       {
         "_id": "L1402",
-        "name": "Principal Component Analysis",
-        "description": "Dimensionality reduction techniques.",
+        "name": "Symmetry",
+        "description": "Group theory and symmetry operations.",
         "module": "M502"
       },
       {
         "_id": "L1403",
-        "name": "Hierarchical Clustering",
-        "description": "Building cluster hierarchies.",
+        "name": "Spectroscopy",
+        "description": "Spectroscopic methods for inorganic compounds.",
         "module": "M502"
       }
     ]
   },
   {
     "_id": "M503",
-    "name": "Model Evaluation",
-    "description": "Cross-validation and performance metrics.",
-    "course": "CS3456",
+    "name": "Inorganic Applications",
+    "description": "Real-world applications of inorganic chemistry.",
+    "course": "RS105",
     "lessons": [
       {
         "_id": "L1501",
-        "name": "Training and Testing",
-        "description": "Splitting data for evaluation.",
+        "name": "Catalysis",
+        "description": "Catalytic processes and mechanisms.",
         "module": "M503"
       },
       {
         "_id": "L1502",
-        "name": "Performance Metrics",
-        "description": "Accuracy, precision, recall, and F1.",
+        "name": "Materials Science",
+        "description": "Inorganic materials and applications.",
         "module": "M503"
       },
       {
         "_id": "L1503",
-        "name": "Cross-Validation",
-        "description": "K-fold and stratified validation.",
+        "name": "Bioinorganic Chemistry",
+        "description": "Role of metals in biological systems.",
         "module": "M503"
       }
     ]
   },
   {
     "_id": "M601",
-    "name": "Text Processing",
-    "description": "Tokenization, stemming, and lemmatization.",
-    "course": "CS2345",
+    "name": "Thermodynamics",
+    "description": "Laws of thermodynamics and their applications.",
+    "course": "RS106",
     "lessons": [
       {
         "_id": "L1601",
-        "name": "Text Tokenization",
-        "description": "Breaking text into tokens.",
+        "name": "First Law",
+        "description": "Energy conservation in chemical systems.",
         "module": "M601"
       },
       {
         "_id": "L1602",
-        "name": "Stemming and Lemmatization",
-        "description": "Normalizing word forms.",
+        "name": "Second Law",
+        "description": "Entropy and spontaneity.",
         "module": "M601"
       },
       {
         "_id": "L1603",
-        "name": "Stop Words Removal",
-        "description": "Filtering common words.",
+        "name": "Gibbs Free Energy",
+        "description": "Predicting reaction spontaneity.",
         "module": "M601"
       }
     ]
   },
   {
     "_id": "M602",
-    "name": "NLP Models",
-    "description": "Word embeddings and transformer models.",
-    "course": "CS2345",
+    "name": "Chemical Kinetics",
+    "description": "Study of reaction rates and mechanisms.",
+    "course": "RS106",
     "lessons": [
       {
         "_id": "L1701",
-        "name": "Word2Vec",
-        "description": "Creating word embeddings.",
+        "name": "Rate Laws",
+        "description": "Determining reaction rate equations.",
         "module": "M602"
       },
       {
         "_id": "L1702",
-        "name": "BERT and Transformers",
-        "description": "Pre-trained language models.",
+        "name": "Reaction Mechanisms",
+        "description": "Elementary steps and intermediates.",
         "module": "M602"
       },
       {
         "_id": "L1703",
-        "name": "Attention Mechanisms",
-        "description": "Understanding self-attention.",
+        "name": "Catalysis",
+        "description": "Effect of catalysts on reaction rates.",
         "module": "M602"
       }
     ]
   },
   {
     "_id": "M603",
-    "name": "NLP Applications",
-    "description": "Sentiment analysis and named entity recognition.",
-    "course": "CS2345",
+    "name": "Quantum Mechanics",
+    "description": "Quantum mechanical principles in chemistry.",
+    "course": "RS106",
     "lessons": [
       {
         "_id": "L1801",
-        "name": "Sentiment Analysis",
-        "description": "Classifying text emotions.",
+        "name": "Wave-Particle Duality",
+        "description": "Quantum nature of matter.",
         "module": "M603"
       },
       {
         "_id": "L1802",
-        "name": "Named Entity Recognition",
-        "description": "Identifying entities in text.",
+        "name": "Schrödinger Equation",
+        "description": "Solving quantum problems.",
         "module": "M603"
       },
       {
         "_id": "L1803",
-        "name": "Machine Translation",
-        "description": "Translating between languages.",
+        "name": "Atomic Orbitals",
+        "description": "Shapes and energies of orbitals.",
         "module": "M603"
       }
     ]
   },
   {
     "_id": "M701",
-    "name": "Spring Boot Basics",
-    "description": "Setting up Spring Boot applications.",
-    "course": "CS8901",
+    "name": "Elvish Languages",
+    "description": "Study of Sindarin and Quenya.",
+    "course": "RS107",
     "lessons": [
       {
         "_id": "L1901",
-        "name": "Spring Boot Setup",
-        "description": "Creating your first Spring Boot app.",
+        "name": "Sindarin Basics",
+        "description": "Introduction to Sindarin grammar.",
         "module": "M701"
       },
       {
         "_id": "L1902",
-        "name": "Dependency Injection",
-        "description": "Understanding IoC containers.",
+        "name": "Quenya Fundamentals",
+        "description": "Learning High Elvish.",
         "module": "M701"
       },
       {
         "_id": "L1903",
-        "name": "Spring Boot Annotations",
-        "description": "Key annotations and their usage.",
+        "name": "Elvish Scripts",
+        "description": "Tengwar writing system.",
         "module": "M701"
       }
     ]
   },
   {
     "_id": "M702",
-    "name": "REST APIs",
-    "description": "Building RESTful web services.",
-    "course": "CS8901",
+    "name": "Dwarvish and Black Speech",
+    "description": "Study of Khuzdul and Mordor languages.",
+    "course": "RS107",
     "lessons": [
       {
         "_id": "L2001",
-        "name": "REST Principles",
-        "description": "Understanding RESTful architecture.",
+        "name": "Khuzdul Language",
+        "description": "Secret language of Dwarves.",
         "module": "M702"
       },
       {
         "_id": "L2002",
-        "name": "Spring MVC",
-        "description": "Creating REST controllers.",
+        "name": "Black Speech",
+        "description": "Language of Mordor.",
         "module": "M702"
       },
       {
         "_id": "L2003",
-        "name": "API Documentation",
-        "description": "Using Swagger for API docs.",
+        "name": "Cirth Script",
+        "description": "Runic writing system.",
         "module": "M702"
       }
     ]
   },
   {
     "_id": "M703",
-    "name": "Spring Data JPA",
-    "description": "Database integration with Spring.",
-    "course": "CS8901",
+    "name": "Linguistic Analysis",
+    "description": "Comparative linguistics of Middle-earth.",
+    "course": "RS107",
     "lessons": [
       {
         "_id": "L2101",
-        "name": "JPA Entities",
-        "description": "Mapping Java objects to database tables.",
+        "name": "Language Evolution",
+        "description": "How languages evolved in Middle-earth.",
         "module": "M703"
       },
       {
         "_id": "L2102",
-        "name": "Repository Pattern",
-        "description": "Using Spring Data repositories.",
+        "name": "Phonology",
+        "description": "Sound systems of ancient languages.",
         "module": "M703"
       },
       {
         "_id": "L2103",
-        "name": "Query Methods",
-        "description": "Custom queries and JPQL.",
+        "name": "Etymology",
+        "description": "Origins of Middle-earth words.",
         "module": "M703"
       }
     ]
   },
   {
     "_id": "M801",
-    "name": "Neural Networks",
-    "description": "Understanding deep neural network architectures.",
-    "course": "CS4567",
+    "name": "Historical Alliances",
+    "description": "Study of alliances in Middle-earth history.",
+    "course": "RS108",
     "lessons": [
       {
         "_id": "L2201",
-        "name": "Perceptrons",
-        "description": "Basic building blocks of neural networks.",
+        "name": "The Last Alliance",
+        "description": "Elves and Men united against Sauron.",
         "module": "M801"
       },
       {
         "_id": "L2202",
-        "name": "Backpropagation",
-        "description": "Training neural networks.",
+        "name": "The Fellowship",
+        "description": "Formation of the Fellowship of the Ring.",
         "module": "M801"
       },
       {
         "_id": "L2203",
-        "name": "Activation Functions",
-        "description": "ReLU, sigmoid, and tanh.",
+        "name": "The Council of Elrond",
+        "description": "Diplomatic gathering at Rivendell.",
         "module": "M801"
       }
     ]
   },
   {
     "_id": "M802",
-    "name": "CNNs and Image Processing",
-    "description": "Convolutional neural networks for vision tasks.",
-    "course": "CS4567",
+    "name": "Conflict Resolution",
+    "description": "Diplomacy and conflict in Middle-earth.",
+    "course": "RS108",
     "lessons": [
       {
         "_id": "L2301",
-        "name": "Convolutional Layers",
-        "description": "Understanding convolutions.",
+        "name": "Negotiation Tactics",
+        "description": "Diplomatic strategies in Middle-earth.",
         "module": "M802"
       },
       {
         "_id": "L2302",
-        "name": "Pooling Layers",
-        "description": "Max pooling and average pooling.",
+        "name": "War and Peace",
+        "description": "Understanding conflicts and resolutions.",
         "module": "M802"
       },
       {
         "_id": "L2303",
-        "name": "Image Classification",
-        "description": "Building CNN classifiers.",
+        "name": "Leadership Roles",
+        "description": "Leadership in multi-species diplomacy.",
         "module": "M802"
       }
     ]
   },
   {
     "_id": "M803",
-    "name": "RNNs and NLP",
-    "description": "Recurrent networks for sequence modeling.",
-    "course": "CS4567",
+    "name": "Cultural Understanding",
+    "description": "Understanding different cultures of Middle-earth.",
+    "course": "RS108",
     "lessons": [
       {
         "_id": "L2401",
-        "name": "Recurrent Neural Networks",
-        "description": "Processing sequential data.",
+        "name": "Elvish Culture",
+        "description": "Traditions and values of Elves.",
         "module": "M803"
       },
       {
         "_id": "L2402",
-        "name": "LSTM and GRU",
-        "description": "Long short-term memory networks.",
+        "name": "Dwarvish Culture",
+        "description": "Customs and society of Dwarves.",
         "module": "M803"
       },
       {
         "_id": "L2403",
-        "name": "Sequence-to-Sequence Models",
-        "description": "Building translation models.",
+        "name": "Human Kingdoms",
+        "description": "Diversity of human cultures.",
         "module": "M803"
       }
     ]

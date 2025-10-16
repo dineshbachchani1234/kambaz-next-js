@@ -1,146 +1,146 @@
 [
     { 
       "_id": "A101", 
-      "title": "React Components Assignment", 
-      "course": "CS1234",
-      "description": "Build a React application with functional components. Create at least 5 reusable components and demonstrate props passing between parent and child components."
+      "title": "Propulsion Assignment", 
+      "course": "RS101",
+      "description": "Design a rocket propulsion system for a Mars mission. Include calculations for thrust, specific impulse, and fuel requirements."
     },
     { 
       "_id": "A102", 
-      "title": "State Management Project", 
-      "course": "CS1234",
-      "description": "Implement a todo list application using React hooks. Use useState for managing todos and useEffect for localStorage persistence."
+      "title": "Combustion Analysis", 
+      "course": "RS101",
+      "description": "Analyze combustion efficiency in rocket engines. Compare different fuel types and their performance characteristics."
     },
     { 
       "_id": "A103", 
-      "title": "React Hooks Quiz", 
-      "course": "CS1234",
-      "description": "Complete a quiz covering useState, useEffect, useContext, and custom hooks. Demonstrate understanding of React hook rules and best practices."
+      "title": "Nozzle Design Project", 
+      "course": "RS101",
+      "description": "Design and optimize a rocket nozzle for maximum efficiency. Use CFD simulations to validate your design."
     },
     { 
       "_id": "A201", 
-      "title": "AWS Deployment Project", 
-      "course": "CS6789",
-      "description": "Deploy a web application to AWS using EC2, S3, and RDS. Configure load balancing and auto-scaling for production readiness."
+      "title": "Aerodynamics Quiz", 
+      "course": "RS102",
+      "description": "Complete a comprehensive quiz on aerodynamic principles, fluid dynamics, and airfoil design concepts."
     },
     { 
       "_id": "A202", 
-      "title": "Cloud Architecture Design", 
-      "course": "CS6789",
-      "description": "Design a scalable cloud architecture for a high-traffic application. Create diagrams showing components, data flow, and failover strategies."
+      "title": "Flow Analysis", 
+      "course": "RS102",
+      "description": "Analyze subsonic and supersonic flow patterns around aircraft wings. Create visualizations of pressure distributions."
     },
     { 
       "_id": "A203", 
-      "title": "Scalability Analysis", 
-      "course": "CS6789",
-      "description": "Analyze the scalability of a cloud application. Identify bottlenecks and propose solutions for horizontal and vertical scaling."
+      "title": "Heating Analysis", 
+      "course": "RS102",
+      "description": "Study aerodynamic heating during atmospheric re-entry. Design thermal protection systems for spacecraft."
     },
     { 
       "_id": "A301", 
-      "title": "AI Search Algorithms", 
-      "course": "CS7890",
-      "description": "Implement BFS, DFS, and A* search algorithms. Apply them to solve pathfinding problems and compare performance metrics."
+      "title": "Structural Design Task", 
+      "course": "RS103",
+      "description": "Design spacecraft structure capable of withstanding launch and orbital stresses. Perform structural analysis."
     },
     { 
       "_id": "A302", 
-      "title": "Neural Network Basics", 
-      "course": "CS7890",
-      "description": "Build a simple neural network from scratch using Python. Train it on the MNIST dataset and achieve at least 90% accuracy."
+      "title": "Orbital Calculations", 
+      "course": "RS103",
+      "description": "Calculate orbital parameters for a satellite mission. Plan orbital maneuvers and trajectory corrections."
     },
     { 
       "_id": "A303", 
-      "title": "AI Ethics Paper", 
-      "course": "CS7890",
-      "description": "Write a research paper on ethical considerations in AI development. Address bias, privacy, accountability, and societal impact."
+      "title": "Systems Engineering Exam", 
+      "course": "RS103",
+      "description": "Comprehensive exam covering spacecraft systems including power, propulsion, thermal control, and communication subsystems."
     },
     { 
       "_id": "A401", 
-      "title": "SQL Query Optimization", 
-      "course": "CS5678",
-      "description": "Optimize slow SQL queries using indexes, query rewriting, and execution plan analysis. Document performance improvements."
+      "title": "Functional Groups Lab", 
+      "course": "RS104",
+      "description": "Identify and synthesize organic compounds with various functional groups. Write reaction mechanisms."
     },
     { 
       "_id": "A402", 
-      "title": "Database Design Project", 
-      "course": "CS5678",
-      "description": "Design a normalized database schema for an e-commerce platform. Create ER diagrams and implement the schema with sample data."
+      "title": "Stereochemistry Project", 
+      "course": "RS104",
+      "description": "Analyze stereoisomers and their properties. Determine R/S configurations and draw Fischer projections."
     },
     { 
       "_id": "A403", 
-      "title": "NoSQL Implementation", 
-      "course": "CS5678",
-      "description": "Build a REST API using MongoDB for data storage. Implement CRUD operations and demonstrate aggregation pipeline usage."
+      "title": "Synthesis Challenge", 
+      "course": "RS104",
+      "description": "Synthesize a complex organic molecule using multi-step reactions. Document each step with mechanisms."
     },
     { 
       "_id": "A501", 
-      "title": "Linear Regression Project", 
-      "course": "CS3456",
-      "description": "Implement linear regression from scratch and apply it to predict housing prices. Compare results with scikit-learn implementation."
+      "title": "Coordination Compounds Lab", 
+      "course": "RS105",
+      "description": "Synthesize and characterize transition metal complexes. Determine oxidation states and geometries."
     },
     { 
       "_id": "A502", 
-      "title": "Classification Models", 
-      "course": "CS3456",
-      "description": "Build and compare multiple classification models (Logistic Regression, Decision Trees, Random Forest) on a dataset of your choice."
+      "title": "Crystal Field Analysis", 
+      "course": "RS105",
+      "description": "Apply crystal field theory to predict properties of metal complexes. Calculate splitting energies."
     },
     { 
       "_id": "A503", 
-      "title": "Feature Engineering Task", 
-      "course": "CS3456",
-      "description": "Perform feature engineering on a raw dataset. Apply techniques like encoding, scaling, and feature selection to improve model performance."
+      "title": "Inorganic Synthesis Project", 
+      "course": "RS105",
+      "description": "Design and execute synthesis of an organometallic compound. Analyze structure using spectroscopy."
     },
     { 
       "_id": "A601", 
-      "title": "Text Preprocessing Assignment", 
-      "course": "CS2345",
-      "description": "Implement text preprocessing pipeline including tokenization, stemming, lemmatization, and stop word removal using NLTK."
+      "title": "Thermodynamics Problem Set", 
+      "course": "RS106",
+      "description": "Solve problems involving enthalpy, entropy, and Gibbs free energy. Predict reaction spontaneity."
     },
     { 
       "_id": "A602", 
-      "title": "Sentiment Analysis Project", 
-      "course": "CS2345",
-      "description": "Build a sentiment analysis model using transformers. Train on movie reviews and achieve at least 85% accuracy on test data."
+      "title": "Kinetics Experiment", 
+      "course": "RS106",
+      "description": "Measure reaction rates and determine rate laws experimentally. Calculate activation energy."
     },
     { 
       "_id": "A603", 
-      "title": "Language Model Quiz", 
-      "course": "CS2345",
-      "description": "Complete a quiz on language models covering Word2Vec, BERT, GPT, and transformer architecture. Explain attention mechanisms."
+      "title": "Quantum Chemistry Quiz", 
+      "course": "RS106",
+      "description": "Assessment on quantum mechanics, atomic orbitals, and molecular orbital theory."
     },
     { 
       "_id": "A701", 
-      "title": "REST API Development", 
-      "course": "CS8901",
-      "description": "Create a RESTful API using Spring Boot with full CRUD operations. Implement proper HTTP methods, status codes, and error handling."
+      "title": "Elvish Translation", 
+      "course": "RS107",
+      "description": "Translate texts between Sindarin, Quenya, and English. Demonstrate understanding of grammar and syntax."
     },
     { 
       "_id": "A702", 
-      "title": "Spring Security Implementation", 
-      "course": "CS8901",
-      "description": "Implement authentication and authorization using Spring Security. Add JWT token-based authentication and role-based access control."
+      "title": "Script Analysis", 
+      "course": "RS107",
+      "description": "Analyze ancient inscriptions in Tengwar and Cirth scripts. Transcribe and translate historical texts."
     },
     { 
       "_id": "A703", 
-      "title": "Microservices Architecture", 
-      "course": "CS8901",
-      "description": "Design and implement a microservices architecture using Spring Boot. Include service discovery, API gateway, and inter-service communication."
+      "title": "Linguistic Research Paper", 
+      "course": "RS107",
+      "description": "Write a research paper on the evolution of languages in Middle-earth. Compare linguistic features."
     },
     { 
       "_id": "A801", 
-      "title": "CNN Image Classification", 
-      "course": "CS4567",
-      "description": "Build a CNN model for image classification using TensorFlow. Train on CIFAR-10 dataset and achieve at least 80% accuracy."
+      "title": "Diplomacy Case Study", 
+      "course": "RS108",
+      "description": "Analyze the Council of Elrond as a case study in multi-species diplomacy. Identify key negotiation strategies."
     },
     { 
       "_id": "A802", 
-      "title": "RNN Text Generation", 
-      "course": "CS4567",
-      "description": "Implement an RNN-based text generation model. Train on a text corpus and generate coherent paragraphs using temperature sampling."
+      "title": "Alliance Formation Project", 
+      "course": "RS108",
+      "description": "Design a diplomatic strategy for forming alliances between different races. Consider cultural differences."
     },
     { 
       "_id": "A803", 
-      "title": "Transfer Learning Project", 
-      "course": "CS4567",
-      "description": "Use transfer learning with a pre-trained model (ResNet or VGG) to solve an image classification problem with limited training data."
+      "title": "Conflict Resolution Essay", 
+      "course": "RS108",
+      "description": "Analyze conflict resolution methods used during the War of the Ring. Propose alternative diplomatic solutions."
     }
   ]
