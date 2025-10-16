@@ -3,8 +3,8 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { AiOutlineDashboard } from "react-icons/ai";
 import { IoCalendarOutline } from "react-icons/io5";
-import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
-import { FaInbox, FaRegCircleUser } from "react-icons/fa6";
+import { LiaBookSolid } from "react-icons/lia";
+import { FaFlask, FaInbox, FaRegCircleUser } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function KambazNavigation() {
@@ -22,7 +22,7 @@ export default function KambazNavigation() {
     { label: "Courses", path: "/Dashboard", icon: LiaBookSolid, onClick: () => setDashboardView('courses') },
     { label: "Calendar", path: "/Calendar", icon: IoCalendarOutline },
     { label: "Inbox", path: "/Inbox", icon: FaInbox },
-    { label: "Labs", path: "/Labs/Lab1", icon: LiaCogSolid },
+    { label: "Labs", path: "/Labs/Lab1", icon: FaFlask },
   ];
 
   const isActive = (label: string) => {

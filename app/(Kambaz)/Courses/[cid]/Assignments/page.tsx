@@ -80,6 +80,51 @@ export default function Assignments() {
             ))}
           </ListGroup>
         </ListGroupItem>
+
+        {/* EXAMS Section */}
+  <ListGroupItem className="p-0 mb-3 border-0">
+    <div className="wd-title p-2 ps-1 bg-light d-flex justify-content-between align-items-center">
+      <span>
+        <BsGripVertical className="me-2" />
+        EXAMS
+      </span>
+      <div>
+        <span className="badge bg-transparent text-dark border me-2">20% of Total</span>
+        <FaPlus />
+        <IoEllipsisVertical className="ms-2" />
+      </div>
+    </div>
+  </ListGroupItem>
+
+  {/* PROJECT Section */}
+  <ListGroupItem className="p-0 mb-3 border-0">
+    <div className="wd-title p-2 ps-1 bg-light d-flex justify-content-between align-items-center">
+      <span>
+        <BsGripVertical className="me-2" />
+        PROJECT
+      </span>
+      <div>
+        <span className="badge bg-transparent text-dark border me-2">30% of Total</span>
+        <FaPlus />
+        <IoEllipsisVertical className="ms-2" />
+      </div>
+    </div>
+  </ListGroupItem>
+
+  {/* QUIZZES Section */}
+  <ListGroupItem className="p-0 mb-3 border-0">
+    <div className="wd-title p-2 ps-1 bg-light d-flex justify-content-between align-items-center">
+      <span>
+        <BsGripVertical className="me-2" />
+        QUIZZES
+      </span>
+      <div>
+        <span className="badge bg-transparent text-dark border me-2">10% of Total</span>
+        <FaPlus />
+        <IoEllipsisVertical className="ms-2" />
+      </div>
+    </div>
+  </ListGroupItem>
       </ListGroup>
     </div>
   );
