@@ -1,6 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
+import { useParams } from "next/navigation";
+import { use } from "react";
+import * as db from "../../../../Database";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import Link from "next/link";
 
-export default function AssignmentEditor() {
+export default function AssignmentEditor({ params }: { params: Promise<{ cid: string; aid: string }> }) {
+  const { cid, aid } = use(params);
+  const assignment = db.assignments.find((a: any) => a._id === aid);
+
   return (
     <Container className="mt-4">
       <Form>
@@ -8,17 +17,17 @@ export default function AssignmentEditor() {
           <Form.Label htmlFor="wd-name">Assignment Name</Form.Label>
           <Form.Control 
             id="wd-name" 
-            defaultValue="A1" 
+            defaultValue={assignment?.title} 
             size="lg"
           />
         </div>
         <div className="mb-4">
-  <Form.Control 
-    as="textarea" 
-    id="wd-description"
-    rows={10}
-    style={{ lineHeight: '1.8' }}
-    defaultValue={`The assignment is available online
+          <Form.Control 
+            as="textarea" 
+            id="wd-description"
+            rows={10}
+            style={{ lineHeight: '1.8' }}
+            defaultValue={`The assignment is available online
 
 Submit a link to the landing page of your Web application running on Netlify.
 
@@ -30,8 +39,8 @@ The landing page should include the following:
 - Links to all relevant source code repositories
 
 The Kanbas application should include a link to navigate back to the landing page.`}
-  />
-</div>
+          />
+        </div>
 
         <Row className="mb-3">
           <Col xs={3} className="text-end">
@@ -178,12 +187,16 @@ The Kanbas application should include a link to navigate back to the landing pag
         <hr className="my-4" />
 
         <div className="d-flex justify-content-end">
-          <Button variant="secondary" className="me-2">
-            Cancel
-          </Button>
-          <Button variant="danger">
-            Save
-          </Button>
+          <Link href={`/Courses/${cid}/Assignments`}>
+            <Button variant="secondary" className="me-2">
+              Cancel
+            </Button>
+          </Link>
+          <Link href={`/Courses/${cid}/Assignments`}>
+            <Button variant="danger">
+              Save
+            </Button>
+          </Link>
         </div>
       </Form>
     </Container>
