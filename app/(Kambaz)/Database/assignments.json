@@ -1,26 +1,146 @@
 [
-    { "_id": "A101", "title": "React Components Assignment", "course": "CS1234" },
-    { "_id": "A102", "title": "State Management Project", "course": "CS1234" },
-    { "_id": "A103", "title": "React Hooks Quiz", "course": "CS1234" },
-    { "_id": "A201", "title": "AWS Deployment Project", "course": "CS6789" },
-    { "_id": "A202", "title": "Cloud Architecture Design", "course": "CS6789" },
-    { "_id": "A203", "title": "Scalability Analysis", "course": "CS6789" },
-    { "_id": "A301", "title": "AI Search Algorithms", "course": "CS7890" },
-    { "_id": "A302", "title": "Neural Network Basics", "course": "CS7890" },
-    { "_id": "A303", "title": "AI Ethics Paper", "course": "CS7890" },
-    { "_id": "A401", "title": "SQL Query Optimization", "course": "CS5678" },
-    { "_id": "A402", "title": "Database Design Project", "course": "CS5678" },
-    { "_id": "A403", "title": "NoSQL Implementation", "course": "CS5678" },
-    { "_id": "A501", "title": "Linear Regression Project", "course": "CS3456" },
-    { "_id": "A502", "title": "Classification Models", "course": "CS3456" },
-    { "_id": "A503", "title": "Feature Engineering Task", "course": "CS3456" },
-    { "_id": "A601", "title": "Text Preprocessing Assignment", "course": "CS2345" },
-    { "_id": "A602", "title": "Sentiment Analysis Project", "course": "CS2345" },
-    { "_id": "A603", "title": "Language Model Quiz", "course": "CS2345" },
-    { "_id": "A701", "title": "REST API Development", "course": "CS8901" },
-    { "_id": "A702", "title": "Spring Security Implementation", "course": "CS8901" },
-    { "_id": "A703", "title": "Microservices Architecture", "course": "CS8901" },
-    { "_id": "A801", "title": "CNN Image Classification", "course": "CS4567" },
-    { "_id": "A802", "title": "RNN Text Generation", "course": "CS4567" },
-    { "_id": "A803", "title": "Transfer Learning Project", "course": "CS4567" }
+    { 
+      "_id": "A101", 
+      "title": "React Components Assignment", 
+      "course": "CS1234",
+      "description": "Build a React application with functional components. Create at least 5 reusable components and demonstrate props passing between parent and child components."
+    },
+    { 
+      "_id": "A102", 
+      "title": "State Management Project", 
+      "course": "CS1234",
+      "description": "Implement a todo list application using React hooks. Use useState for managing todos and useEffect for localStorage persistence."
+    },
+    { 
+      "_id": "A103", 
+      "title": "React Hooks Quiz", 
+      "course": "CS1234",
+      "description": "Complete a quiz covering useState, useEffect, useContext, and custom hooks. Demonstrate understanding of React hook rules and best practices."
+    },
+    { 
+      "_id": "A201", 
+      "title": "AWS Deployment Project", 
+      "course": "CS6789",
+      "description": "Deploy a web application to AWS using EC2, S3, and RDS. Configure load balancing and auto-scaling for production readiness."
+    },
+    { 
+      "_id": "A202", 
+      "title": "Cloud Architecture Design", 
+      "course": "CS6789",
+      "description": "Design a scalable cloud architecture for a high-traffic application. Create diagrams showing components, data flow, and failover strategies."
+    },
+    { 
+      "_id": "A203", 
+      "title": "Scalability Analysis", 
+      "course": "CS6789",
+      "description": "Analyze the scalability of a cloud application. Identify bottlenecks and propose solutions for horizontal and vertical scaling."
+    },
+    { 
+      "_id": "A301", 
+      "title": "AI Search Algorithms", 
+      "course": "CS7890",
+      "description": "Implement BFS, DFS, and A* search algorithms. Apply them to solve pathfinding problems and compare performance metrics."
+    },
+    { 
+      "_id": "A302", 
+      "title": "Neural Network Basics", 
+      "course": "CS7890",
+      "description": "Build a simple neural network from scratch using Python. Train it on the MNIST dataset and achieve at least 90% accuracy."
+    },
+    { 
+      "_id": "A303", 
+      "title": "AI Ethics Paper", 
+      "course": "CS7890",
+      "description": "Write a research paper on ethical considerations in AI development. Address bias, privacy, accountability, and societal impact."
+    },
+    { 
+      "_id": "A401", 
+      "title": "SQL Query Optimization", 
+      "course": "CS5678",
+      "description": "Optimize slow SQL queries using indexes, query rewriting, and execution plan analysis. Document performance improvements."
+    },
+    { 
+      "_id": "A402", 
+      "title": "Database Design Project", 
+      "course": "CS5678",
+      "description": "Design a normalized database schema for an e-commerce platform. Create ER diagrams and implement the schema with sample data."
+    },
+    { 
+      "_id": "A403", 
+      "title": "NoSQL Implementation", 
+      "course": "CS5678",
+      "description": "Build a REST API using MongoDB for data storage. Implement CRUD operations and demonstrate aggregation pipeline usage."
+    },
+    { 
+      "_id": "A501", 
+      "title": "Linear Regression Project", 
+      "course": "CS3456",
+      "description": "Implement linear regression from scratch and apply it to predict housing prices. Compare results with scikit-learn implementation."
+    },
+    { 
+      "_id": "A502", 
+      "title": "Classification Models", 
+      "course": "CS3456",
+      "description": "Build and compare multiple classification models (Logistic Regression, Decision Trees, Random Forest) on a dataset of your choice."
+    },
+    { 
+      "_id": "A503", 
+      "title": "Feature Engineering Task", 
+      "course": "CS3456",
+      "description": "Perform feature engineering on a raw dataset. Apply techniques like encoding, scaling, and feature selection to improve model performance."
+    },
+    { 
+      "_id": "A601", 
+      "title": "Text Preprocessing Assignment", 
+      "course": "CS2345",
+      "description": "Implement text preprocessing pipeline including tokenization, stemming, lemmatization, and stop word removal using NLTK."
+    },
+    { 
+      "_id": "A602", 
+      "title": "Sentiment Analysis Project", 
+      "course": "CS2345",
+      "description": "Build a sentiment analysis model using transformers. Train on movie reviews and achieve at least 85% accuracy on test data."
+    },
+    { 
+      "_id": "A603", 
+      "title": "Language Model Quiz", 
+      "course": "CS2345",
+      "description": "Complete a quiz on language models covering Word2Vec, BERT, GPT, and transformer architecture. Explain attention mechanisms."
+    },
+    { 
+      "_id": "A701", 
+      "title": "REST API Development", 
+      "course": "CS8901",
+      "description": "Create a RESTful API using Spring Boot with full CRUD operations. Implement proper HTTP methods, status codes, and error handling."
+    },
+    { 
+      "_id": "A702", 
+      "title": "Spring Security Implementation", 
+      "course": "CS8901",
+      "description": "Implement authentication and authorization using Spring Security. Add JWT token-based authentication and role-based access control."
+    },
+    { 
+      "_id": "A703", 
+      "title": "Microservices Architecture", 
+      "course": "CS8901",
+      "description": "Design and implement a microservices architecture using Spring Boot. Include service discovery, API gateway, and inter-service communication."
+    },
+    { 
+      "_id": "A801", 
+      "title": "CNN Image Classification", 
+      "course": "CS4567",
+      "description": "Build a CNN model for image classification using TensorFlow. Train on CIFAR-10 dataset and achieve at least 80% accuracy."
+    },
+    { 
+      "_id": "A802", 
+      "title": "RNN Text Generation", 
+      "course": "CS4567",
+      "description": "Implement an RNN-based text generation model. Train on a text corpus and generate coherent paragraphs using temperature sampling."
+    },
+    { 
+      "_id": "A803", 
+      "title": "Transfer Learning Project", 
+      "course": "CS4567",
+      "description": "Use transfer learning with a pre-trained model (ResNet or VGG) to solve an image classification problem with limited training data."
+    }
   ]

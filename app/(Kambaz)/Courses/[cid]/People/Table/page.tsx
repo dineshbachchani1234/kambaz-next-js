@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { useParams } from "next/navigation";
 import { use } from "react";
 import * as db from "../../../../Database";
 import { Table } from "react-bootstrap";

@@ -38,20 +38,20 @@ export default function KambazNavigation() {
         <img src="/images/NEU.png" width="75px" alt="Northeastern University" />
       </a>
       <a className={`list-group-item text-center border-0 ${pathname.includes("Account") ? "bg-white" : "bg-black"}`} href="/Account" id="wd-account-link">
-        <FaRegCircleUser className={`fs-1 ${pathname.includes("Account") ? "text-danger" : "text-white"}`} />
+        <FaRegCircleUser className="fs-1 text-danger" />
         <br />
-        Account
+        <span className={pathname.includes("Account") ? "text-danger" : "text-white"}>Account</span>
       </a>
       {links.map((link) => (
         <Link 
           key={link.label} 
           href={link.path} 
-          className={`list-group-item text-center border-0 ${isActive(link.label) ? "text-danger bg-white" : "text-white bg-black"}`}
+          className={`list-group-item text-center border-0 ${isActive(link.label) ? "bg-white" : "bg-black"}`}
           onClick={link.onClick}
         >
-          {link.icon({ className: `fs-1 ${isActive(link.label) ? "text-danger" : "text-white"}` })}
+          {link.icon({ className: "fs-1 text-danger" })}
           <br />
-          {link.label}
+          <span className={isActive(link.label) ? "text-danger" : "text-white"}>{link.label}</span>
         </Link>
       ))}
     </div>
