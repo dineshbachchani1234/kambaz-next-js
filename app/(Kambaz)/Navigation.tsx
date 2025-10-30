@@ -37,11 +37,11 @@ export default function KambazNavigation() {
       <a className="list-group-item bg-black border-0 text-center" target="_blank" href="https://www.northeastern.edu/" id="wd-neu-link">
         <img src="/images/NEU.png" width="75px" alt="Northeastern University" />
       </a>
-      <a className={`list-group-item text-center border-0 ${pathname.includes("Account") ? "bg-white" : "bg-black"}`} href="/Account" id="wd-account-link">
+      <Link className={`list-group-item text-center border-0 ${pathname.includes("Account") ? "bg-white" : "bg-black"}`} href="/Account" id="wd-account-link">
         <FaRegCircleUser className="fs-1 text-danger" />
         <br />
         <span className={pathname.includes("Account") ? "text-danger" : "text-white"}>Account</span>
-      </a>
+      </Link>
       {links.map((link) => (
         <Link 
           key={link.label} 
