@@ -24,31 +24,45 @@ export default function Signin() {
       return;
     }
     dispatch(setCurrentUser(user));
+    
+    // Save to localStorage
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("kanbas-current-user", JSON.stringify(user));
+    }
+    
     router.push("/Dashboard");
+  };
+  
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      signin();
+    }
   };
   
   return (
     <Container style={{ maxWidth: "400px", marginTop: "50px" }}>
       <h3>Signin</h3>
-      <Form>
+      <Form onSubmit={(e) => { e.preventDefault(); signin(); }}>
         <Form.Control
           type="text"
           placeholder="username"
           className="mb-2"
-          defaultValue={credentials.username}
+          value={credentials.username || ''}
           onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
+          onKeyPress={handleKeyPress}
         />
         <Form.Control
           type="password"
           placeholder="password"
           className="mb-3"
-          defaultValue={credentials.password}
+          value={credentials.password || ''}
           onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+          onKeyPress={handleKeyPress}
         />
         <Button 
           variant="primary" 
           className="w-100 mb-2"
-          onClick={signin}
+          type="submit"
           id="wd-signin-btn"
         >
           Signin

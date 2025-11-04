@@ -6,8 +6,12 @@ import { enrollUserInCourse, unenrollUserFromCourse } from "../Enrollments/reduc
 import { useState } from "react";
 import Link from "next/link";
 import { Button, Card, CardBody, CardImg, CardText, CardTitle, Col, Row, FormControl } from "react-bootstrap";
+import useHydrateUser from "../hooks/useHydrateUser";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Dashboard() {
+  useHydrateUser();
+  
   const { courses } = useSelector((state: any) => state.coursesReducer);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   const { enrollments } = useSelector((state: any) => state.enrollmentsReducer);
@@ -21,7 +25,6 @@ export default function Dashboard() {
   
   const isFaculty = currentUser?.role === "FACULTY";
   
-  // Check if user is enrolled in a course
   const isEnrolled = (courseId: string) => {
     return enrollments.some(
       (enrollment: any) =>
@@ -30,7 +33,6 @@ export default function Dashboard() {
     );
   };
   
-  // Filter courses based on enrollment view mode
   const displayedCourses = showAllCourses 
     ? courses 
     : courses.filter((course: any) =>
@@ -51,6 +53,28 @@ export default function Dashboard() {
     dispatch(unenrollUserFromCourse({ user: currentUser._id, course: courseId }));
   };
   
+  const handleAddCourse = () => {
+    const newId = uuidv4();
+    const { _id, ...courseWithoutId } = course;
+    const newCourse = { ...courseWithoutId, _id: newId };
+    
+    dispatch(addNewCourse(newCourse));
+    
+    if (currentUser?._id) {
+      dispatch(enrollUserInCourse({ user: currentUser._id, course: newId }));
+    }
+    
+    setCourse({
+      _id: "0", 
+      name: "New Course", 
+      number: "New Number",
+      startDate: "2023-09-10", 
+      endDate: "2023-12-15",
+      image: "/images/reactjs.webp", 
+      description: "New Description"
+    });
+  };
+  
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
@@ -64,23 +88,11 @@ export default function Dashboard() {
               id="wd-enrollments-btn"
               onClick={() => setShowAllCourses(!showAllCourses)}
             >
-              {showAllCourses ? "Show Enrolled" : "Enrollments"}
+              {showAllCourses ? "My Enrollments" : "All Enrollments"}
             </Button>
             <button className="btn btn-primary float-end me-2"
                     id="wd-add-new-course-click"
-                    onClick={() => {
-                      const { _id, ...courseWithoutId } = course;
-                      dispatch(addNewCourse(courseWithoutId));
-                      setCourse({
-                        _id: "0", 
-                        name: "New Course", 
-                        number: "New Number",
-                        startDate: "2023-09-10", 
-                        endDate: "2023-12-15",
-                        image: "/images/reactjs.webp", 
-                        description: "New Description"
-                      });
-                    }}> Add </button>
+                    onClick={handleAddCourse}> Add </button>
             <button className="btn btn-warning float-end me-2"
                     id="wd-update-course-click"
                     onClick={() => dispatch(updateCourse(course))}> Update </button>
@@ -101,7 +113,7 @@ export default function Dashboard() {
             id="wd-enrollments-btn"
             onClick={() => setShowAllCourses(!showAllCourses)}
           >
-            {showAllCourses ? "Show Enrolled" : "Enrollments"}
+            {showAllCourses ? "My Enrollments" : "All Enrollments"}
           </Button>
           <div className="clearfix"></div>
         </>
@@ -156,7 +168,7 @@ export default function Dashboard() {
                       </>
                     )}
                     
-                    {!showAllCourses && isFaculty && (
+                    {isFaculty && (
                       <>
                         <Button variant="warning" className="ms-2"
                                 onClick={(event) => {

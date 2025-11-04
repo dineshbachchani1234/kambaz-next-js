@@ -22,6 +22,9 @@ export default function Profile() {
   
   const signout = () => {
     dispatch(setCurrentUser(null));
+    if (typeof window !== "undefined") {
+      window.localStorage.removeItem("kanbas-current-user");
+    }
     router.push("/Account/Signin");
   };
   

@@ -1,20 +1,42 @@
-"use client";
-import { useState } from "react";
+'use client';
+import { useState, useEffect } from "react";
+import { FormControl } from "react-bootstrap";
 
 export default function DateStateVariable() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState<Date | null>(null);
   
+  useEffect(() => {
+    setStartDate(new Date());
+  }, []);
+
+  const dateObjectToHtmlDateString = (date: Date) => {
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+  if (!startDate) {
+    return (
+      <div id="wd-date-state-variables">
+        <h2>Date State Variables</h2>
+        <h3>Loading...</h3>
+        <hr/>
+      </div>
+    );
+  }
+
   return (
     <div id="wd-date-state-variables">
       <h2>Date State Variables</h2>
-      <h3>{startDate.toDateString()}</h3>
-      <input 
+      <h3>{JSON.stringify(startDate)}</h3>
+      <h3>{dateObjectToHtmlDateString(startDate)}</h3>
+      <FormControl
         type="date"
-        className="form-control mb-2"
-        value={startDate.toISOString().split('T')[0]}
+        value={dateObjectToHtmlDateString(startDate)}
         onChange={(e) => setStartDate(new Date(e.target.value))}
       />
-      <hr />
+      <hr/>
     </div>
   );
 }
