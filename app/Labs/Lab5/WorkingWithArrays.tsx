@@ -5,12 +5,15 @@ const HTTP_SERVER = process.env.NEXT_PUBLIC_HTTP_SERVER || "http://localhost:400
 
 export default function WorkingWithArrays() {
   const API = `${HTTP_SERVER}/lab5/todos`;
-  const [todo, setTodo] = useState({
+  
+  // Separate state for each section
+  const [retrieveId, setRetrieveId] = useState("1");
+  const [removeId, setRemoveId] = useState("1");
+  const [updateTodo, setUpdateTodo] = useState({ id: "1", title: "NodeJS Assignment" });
+  const [completedTodo, setCompletedTodo] = useState({ id: "1", completed: false });
+  const [descriptionTodo, setDescriptionTodo] = useState({
     id: "1",
-    title: "NodeJS Assignment",
     description: "Create a NodeJS server with ExpressJS",
-    due: "2021-09-09",
-    completed: false,
   });
   
   return (
@@ -28,10 +31,10 @@ export default function WorkingWithArrays() {
         <input
           id="wd-todo-id"
           className="form-control mb-2"
-          value={todo.id}
-          onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+          value={retrieveId}
+          onChange={(e) => setRetrieveId(e.target.value)}
         />
-        <a id="wd-retrieve-todo-by-id" className="btn btn-primary" href={`${API}/${todo.id}`}>
+        <a id="wd-retrieve-todo-by-id" className="btn btn-primary" href={`${API}/${retrieveId}`}>
           Get Todo by ID
         </a>
       </div>
@@ -54,11 +57,11 @@ export default function WorkingWithArrays() {
         <input
           id="wd-remove-todo-id"
           className="form-control mb-2"
-          value={todo.id}
-          onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+          value={removeId}
+          onChange={(e) => setRemoveId(e.target.value)}
         />
-        <a id="wd-remove-todo" className="btn btn-primary" href={`${API}/${todo.id}/delete`}>
-          Remove Todo with ID = {todo.id}
+        <a id="wd-remove-todo" className="btn btn-primary" href={`${API}/${removeId}/delete`}>
+          Remove Todo with ID = {removeId}
         </a>
       </div>
       <hr />
@@ -68,15 +71,15 @@ export default function WorkingWithArrays() {
         <input
           className="form-control"
           style={{ width: "100px" }}
-          value={todo.id}
-          onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+          value={updateTodo.id}
+          onChange={(e) => setUpdateTodo({ ...updateTodo, id: e.target.value })}
         />
         <input
           className="form-control flex-grow-1"
-          value={todo.title}
-          onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+          value={updateTodo.title}
+          onChange={(e) => setUpdateTodo({ ...updateTodo, title: e.target.value })}
         />
-        <a id="wd-update-todo" className="btn btn-primary" href={`${API}/${todo.id}/title/${todo.title}`}>
+        <a id="wd-update-todo" className="btn btn-primary" href={`${API}/${updateTodo.id}/title/${updateTodo.title}`}>
           Update Todo
         </a>
       </div>
@@ -86,22 +89,22 @@ export default function WorkingWithArrays() {
       <div className="mb-3">
         <input
           className="form-control mb-2"
-          value={todo.id}
-          onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+          value={completedTodo.id}
+          onChange={(e) => setCompletedTodo({ ...completedTodo, id: e.target.value })}
         />
         <div className="form-check mb-2">
           <input
             type="checkbox"
             className="form-check-input"
             id="wd-todo-completed"
-            checked={todo.completed}
-            onChange={(e) => setTodo({ ...todo, completed: e.target.checked })}
+            checked={completedTodo.completed}
+            onChange={(e) => setCompletedTodo({ ...completedTodo, completed: e.target.checked })}
           />
           <label className="form-check-label" htmlFor="wd-todo-completed">
             Completed
           </label>
         </div>
-        <a id="wd-update-todo-completed" className="btn btn-primary" href={`${API}/${todo.id}/completed/${todo.completed}`}>
+        <a id="wd-update-todo-completed" className="btn btn-primary" href={`${API}/${completedTodo.id}/completed/${completedTodo.completed}`}>
           Update Completed
         </a>
       </div>
@@ -111,15 +114,15 @@ export default function WorkingWithArrays() {
       <div className="mb-3">
         <input
           className="form-control mb-2"
-          value={todo.id}
-          onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+          value={descriptionTodo.id}
+          onChange={(e) => setDescriptionTodo({ ...descriptionTodo, id: e.target.value })}
         />
         <input
           className="form-control mb-2"
-          value={todo.description}
-          onChange={(e) => setTodo({ ...todo, description: e.target.value })}
+          value={descriptionTodo.description}
+          onChange={(e) => setDescriptionTodo({ ...descriptionTodo, description: e.target.value })}
         />
-        <a id="wd-update-todo-description" className="btn btn-primary" href={`${API}/${todo.id}/description/${todo.description}`}>
+        <a id="wd-update-todo-description" className="btn btn-primary" href={`${API}/${descriptionTodo.id}/description/${descriptionTodo.description}`}>
           Update Description
         </a>
       </div>
