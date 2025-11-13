@@ -22,16 +22,16 @@ export default function QueryParameters() {
         value={b}
         onChange={(e) => setB(e.target.value)}
       />
-      <a className="btn btn-primary me-2" id="wd-query-parameter-add" href={`http://localhost:4000/lab5/calculator?operation=add&a=${a}&b=${b}`}>
+      <a className="btn btn-primary me-2" id="wd-query-parameter-add" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}/lab5/calculator?operation=add&a=${a}&b=${b}`}>
         Add {a} + {b}
       </a>
-      <a className="btn btn-danger me-2" id="wd-query-parameter-subtract" href={`http://localhost:4000/lab5/calculator?operation=subtract&a=${a}&b=${b}`}>
+      <a className="btn btn-danger me-2" id="wd-query-parameter-subtract" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}/lab5/calculator?operation=subtract&a=${a}&b=${b}`}>
         Subtract {a} - {b}
       </a>
-      <a className="btn btn-success me-2" id="wd-query-parameter-multiply" href={`http://localhost:4000/lab5/calculator?operation=multiply&a=${a}&b=${b}`}>
+      <a className="btn btn-success me-2" id="wd-query-parameter-multiply" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}lab5/calculator?operation=multiply&a=${a}&b=${b}`}>
         Multiply {a} * {b}
       </a>
-      <a className="btn btn-warning" id="wd-query-parameter-divide" href={`http://localhost:4000/lab5/calculator?operation=divide&a=${a}&b=${b}`}>
+      <a className="btn btn-warning" id="wd-query-parameter-divide" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}/lab5/calculator?operation=divide&a=${a}&b=${b}`}>
         Divide {a} / {b}
       </a>
       <hr />

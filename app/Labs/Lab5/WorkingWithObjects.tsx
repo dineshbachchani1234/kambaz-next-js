@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
+const HTTP_SERVER = process.env.NEXT_PUBLIC_HTTP_SERVER || "http://localhost:4000";
+
 export default function WorkingWithObjects() {
   const [assignment, setAssignment] = useState({
     id: 1,
@@ -18,8 +20,8 @@ export default function WorkingWithObjects() {
     course: "CS5610",
   });
 
-  const ASSIGNMENT_API_URL = "http://localhost:4000/lab5/assignment";
-  const MODULE_API_URL = "http://localhost:4000/lab5/module";
+  const ASSIGNMENT_API_URL = `${HTTP_SERVER}/lab5/assignment`;
+  const MODULE_API_URL = `${HTTP_SERVER}/lab5/module`;
 
   return (
     <div id="wd-working-with-objects">

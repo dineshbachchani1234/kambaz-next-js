@@ -22,16 +22,16 @@ export default function PathParameters() {
         value={b}
         onChange={(e) => setB(e.target.value)}
       />
-      <a className="btn btn-primary me-2" id="wd-path-parameter-add" href={`http://localhost:4000/lab5/add/${a}/${b}`}>
+      <a className="btn btn-primary me-2" id="wd-path-parameter-add" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}/lab5/add/${a}/${b}`}>
         Add {a} + {b}
       </a>
-      <a className="btn btn-danger me-2" id="wd-path-parameter-subtract" href={`http://localhost:4000/lab5/subtract/${a}/${b}`}>
+      <a className="btn btn-danger me-2" id="wd-path-parameter-subtract" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}/lab5/subtract/${a}/${b}`}>
         Subtract {a} - {b}
       </a>
-      <a className="btn btn-success me-2" id="wd-path-parameter-multiply" href={`http://localhost:4000/lab5/multiply/${a}/${b}`}>
+      <a className="btn btn-success me-2" id="wd-path-parameter-multiply" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}/lab5/multiply/${a}/${b}`}>
         Multiply {a} * {b}
       </a>
-      <a className="btn btn-warning" id="wd-path-parameter-divide" href={`http://localhost:4000/lab5/divide/${a}/${b}`}>
+      <a className="btn btn-warning" id="wd-path-parameter-divide" href={`${process.env.NEXT_PUBLIC_HTTP_SERVER}/lab5/divide/${a}/${b}`}>
         Divide {a} / {b}
       </a>
       <hr />

@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 
+const HTTP_SERVER = process.env.NEXT_PUBLIC_HTTP_SERVER || "http://localhost:4000";
+
 export default function WorkingWithArrays() {
-  const API = "http://localhost:4000/lab5/todos";
+  const API = `${HTTP_SERVER}/lab5/todos`;
   const [todo, setTodo] = useState({
     id: "1",
     title: "NodeJS Assignment",
