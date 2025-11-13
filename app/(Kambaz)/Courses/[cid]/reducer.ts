@@ -1,0 +1,33 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  courses: [], // Will be loaded from server
+};
+
+const coursesSlice = createSlice({
+  name: "courses",
+  initialState,
+  reducers: {
+    setCourses: (state, action) => {
+      state.courses = action.payload;
+    },
+    addNewCourse: (state, { payload: course }) => {
+      state.courses = [...state.courses, course] as any;
+    },
+    deleteCourse: (state, { payload: courseId }) => {
+      state.courses = state.courses.filter(
+        (course: any) => course._id !== courseId
+      );
+    },
+    updateCourse: (state, { payload: course }) => {
+      state.courses = state.courses.map((c: any) =>
+        c._id === course._id ? course : c
+      ) as any;
+    },
+  },
+});
+
+export const { setCourses, addNewCourse, deleteCourse, updateCourse } =
+  coursesSlice.actions;
+export default coursesSlice.reducer;
