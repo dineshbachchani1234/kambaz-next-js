@@ -10,7 +10,9 @@ import { IoEllipsisVertical } from "react-icons/io5";
 import { FaCheckCircle } from "react-icons/fa";
 import { BiTask } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteAssignment } from "./reducer";
+import { setAssignments } from "./reducer";
+import { useEffect } from "react";
+import * as client from "../../../Courses/client";
 
 export default function Assignments() {
   const { cid } = useParams();
@@ -18,13 +20,30 @@ export default function Assignments() {
   const dispatch = useDispatch();
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
-  const filteredAssignments = assignments.filter((assignment: any) => assignment.course === cid);
   
   const isFaculty = currentUser?.role === "FACULTY";
   
-  const handleDelete = (assignmentId: string) => {
+  const fetchAssignments = async () => {
+    try {
+      const assignments = await client.findAssignmentsForCourse(cid as string);
+      dispatch(setAssignments(assignments));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
+  
+  const handleDelete = async (assignmentId: string) => {
     if (window.confirm("Are you sure you want to remove this assignment?")) {
-      dispatch(deleteAssignment(assignmentId));
+      try {
+        await client.deleteAssignment(assignmentId);
+        dispatch(setAssignments(assignments.filter((a: any) => a._id !== assignmentId)));
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
   
@@ -74,7 +93,7 @@ export default function Assignments() {
           </div>
           
           <ListGroup className="list-group-flush">
-            {filteredAssignments.map((assignment: any) => (
+            {assignments.map((assignment: any) => (
               <ListGroupItem key={assignment._id} className="ps-3" style={{ borderLeft: "3px solid #28a745" }}>
                 <div className="d-flex justify-content-between align-items-start">
                   <div className="d-flex align-items-start">

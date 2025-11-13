@@ -4,7 +4,8 @@ import { use, useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useRouter } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, updateAssignment } from "../reducer";
+import { setAssignments } from "../reducer";
+import * as client from "../../../../Courses/client";
 
 export default function AssignmentEditor({ params }: { params: Promise<{ cid: string; aid: string }> }) {
   const { cid, aid } = use(params);
@@ -26,13 +27,21 @@ export default function AssignmentEditor({ params }: { params: Promise<{ cid: st
     course: cid,
   });
 
-  const handleSave = () => {
-    if (aid === "new") {
-      dispatch(addAssignment(assignment));
-    } else {
-      dispatch(updateAssignment({ ...assignment, _id: aid }));
+  const handleSave = async () => {
+    try {
+      if (aid === "new") {
+        const newAssignment = await client.createAssignmentForCourse(cid as string, assignment);
+        dispatch(setAssignments([...assignments, newAssignment]));
+      } else {
+        await client.updateAssignment({ ...assignment, _id: aid });
+        dispatch(setAssignments(assignments.map((a: any) => 
+          a._id === aid ? { ...assignment, _id: aid } : a
+        )));
+      }
+      router.push(`/Courses/${cid}/Assignments`);
+    } catch (error) {
+      console.error(error);
     }
-    router.push(`/Courses/${cid}/Assignments`);
   };
 
   const handleCancel = () => {

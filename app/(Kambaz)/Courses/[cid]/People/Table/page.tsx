@@ -1,17 +1,26 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { use } from "react";
-import * as db from "../../../../Database";
+import { use, useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
+import * as client from "../../../../Courses/client";
 
 export default function PeopleTable({ params }: { params: Promise<{ cid: string }> }) {
   const { cid } = use(params);
-  const { users, enrollments } = db;
+  const [users, setUsers] = useState<any[]>([]);
   
-  const enrolledUsers = users.filter((usr: any) =>
-    enrollments.some((enrollment: any) => enrollment.user === usr._id && enrollment.course === cid)
-  );
+  const fetchUsers = async () => {
+    try {
+      const enrolledUsers = await client.findUsersForCourse(cid);
+      setUsers(enrolledUsers);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
+  useEffect(() => {
+    fetchUsers();
+  }, []);
 
   return (
     <div id="wd-people-table">
@@ -27,7 +36,7 @@ export default function PeopleTable({ params }: { params: Promise<{ cid: string 
           </tr>
         </thead>
         <tbody>
-          {enrolledUsers.map((user: any) => (
+          {users.map((user: any) => (
             <tr key={user._id}>
               <td className="wd-full-name text-nowrap">
                 <FaUserCircle className="me-2 fs-1 text-secondary" />

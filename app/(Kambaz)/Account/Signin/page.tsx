@@ -6,31 +6,31 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { setCurrentUser } from "../reducer";
-import * as db from "../../Database";
+import * as client from "../client";
 
 export default function Signin() {
   const [credentials, setCredentials] = useState<any>({});
   const dispatch = useDispatch();
   const router = useRouter();
   
-  const signin = () => {
-    const user = db.users.find(
-      (u: any) =>
-        u.username === credentials.username &&
-        u.password === credentials.password
-    );
-    if (!user) {
+  const signin = async () => {
+    try {
+      const user = await client.signin(credentials);
+      if (!user) {
+        alert("Username or password is incorrect");
+        return;
+      }
+      dispatch(setCurrentUser(user));
+      
+      // Save to localStorage
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem("kanbas-current-user", JSON.stringify(user));
+      }
+      
+      router.push("/Dashboard");
+    } catch (error) {
       alert("Username or password is incorrect");
-      return;
     }
-    dispatch(setCurrentUser(user));
-    
-    // Save to localStorage
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("kanbas-current-user", JSON.stringify(user));
-    }
-    
-    router.push("/Dashboard");
   };
   
   const handleKeyPress = (e: React.KeyboardEvent) => {

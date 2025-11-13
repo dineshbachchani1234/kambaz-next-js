@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCurrentUser } from "../reducer";
 import { Form, Button, Container } from "react-bootstrap";
 import { useRouter } from "next/navigation";
+import * as client from "../client";
 
 export default function Profile() {
   const [profile, setProfile] = useState<any>({});
@@ -20,7 +21,24 @@ export default function Profile() {
     }
   }, [currentUser, router]);
   
-  const signout = () => {
+  const updateProfile = async () => {
+    try {
+      const updatedProfile = await client.updateUser(profile);
+      dispatch(setCurrentUser(updatedProfile));
+      
+      // Update localStorage
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem("kanbas-current-user", JSON.stringify(updatedProfile));
+      }
+      
+      alert("Profile updated successfully!");
+    } catch (error) {
+      alert("Failed to update profile");
+    }
+  };
+  
+  const signout = async () => {
+    await client.signout();
     dispatch(setCurrentUser(null));
     if (typeof window !== "undefined") {
       window.localStorage.removeItem("kanbas-current-user");
@@ -35,7 +53,7 @@ export default function Profile() {
   return (
     <Container style={{ maxWidth: "400px", marginTop: "50px" }}>
       <h3>Profile</h3>
-      <Form>
+      <Form onSubmit={(e) => { e.preventDefault(); updateProfile(); }}>
         <Form.Control
           type="text"
           placeholder="username"
@@ -94,6 +112,14 @@ export default function Profile() {
           <option value="FACULTY">Faculty</option>
           <option value="STUDENT">Student</option>
         </Form.Select>
+        <Button 
+          variant="primary" 
+          className="w-100 mb-2"
+          id="wd-update-btn"
+          type="submit"
+        >
+          Update
+        </Button>
         <Button 
           variant="danger" 
           className="w-100 mb-2"

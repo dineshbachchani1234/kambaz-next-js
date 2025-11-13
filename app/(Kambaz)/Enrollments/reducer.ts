@@ -1,15 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createSlice } from "@reduxjs/toolkit";
-import { enrollments } from "../Database";
 
 const initialState = {
-  enrollments: enrollments,
+  enrollments: [], // Will be loaded from server
 };
 
 const enrollmentsSlice = createSlice({
   name: "enrollments",
   initialState,
   reducers: {
+    setEnrollments: (state, action) => {
+      state.enrollments = action.payload;
+    },
     enrollUserInCourse: (state, action) => {
       const newEnrollment = {
         _id: new Date().getTime().toString(),
@@ -28,5 +30,5 @@ const enrollmentsSlice = createSlice({
   },
 });
 
-export const { enrollUserInCourse, unenrollUserFromCourse } = enrollmentsSlice.actions;
+export const { setEnrollments, enrollUserInCourse, unenrollUserFromCourse } = enrollmentsSlice.actions;
 export default enrollmentsSlice.reducer;

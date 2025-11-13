@@ -21,6 +21,11 @@ export default function ProtectedRoute({
       return;
     }
     
+    // Faculty can access all courses
+    if (currentUser.role === "FACULTY") {
+      return;
+    }
+    
     const isEnrolled = enrollments.some(
       (enrollment: any) =>
         enrollment.user === currentUser._id &&
@@ -31,6 +36,11 @@ export default function ProtectedRoute({
       router.push("/Dashboard");
     }
   }, [currentUser, enrollments, courseId, router]);
+  
+  // Faculty can always access
+  if (currentUser?.role === "FACULTY") {
+    return <>{children}</>;
+  }
   
   const isEnrolled = currentUser && enrollments.some(
     (enrollment: any) =>
