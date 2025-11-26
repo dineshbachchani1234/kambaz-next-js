@@ -24,6 +24,18 @@ export default function AccountNavigation() {
           {link}
         </Link>
       ))}
+      {currentUser && currentUser.role === "ADMIN" && (
+        <Link 
+          href="/Account/Users"
+          className={`list-group-item border-0 text-decoration-none bg-white ${
+            pathname.endsWith('Users') 
+              ? 'text-black border-start border-dark border-4' 
+              : 'text-danger'
+          }`}
+        >
+          Users
+        </Link>
+      )}
     </div>
   );
 }

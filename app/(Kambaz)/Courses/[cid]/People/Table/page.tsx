@@ -1,29 +1,32 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { use, useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
-import * as client from "../../../../Courses/client";
+import Link from "next/link";
+import { useState } from "react";
+import PeopleDetails from "../Details";
 
-export default function PeopleTable({ params }: { params: Promise<{ cid: string }> }) {
-  const { cid } = use(params);
-  const [users, setUsers] = useState<any[]>([]);
+export default function PeopleTable({ 
+  users = [], 
+  fetchUsers 
+}: { 
+  users?: any[]; 
+  fetchUsers: () => void; 
+}) {
+  const [showDetails, setShowDetails] = useState(false);
+  const [showUserId, setShowUserId] = useState<string | null>(null);
   
-  const fetchUsers = async () => {
-    try {
-      const enrolledUsers = await client.findUsersForCourse(cid);
-      setUsers(enrolledUsers);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
   return (
     <div id="wd-people-table">
+      {showDetails && (
+        <PeopleDetails
+          uid={showUserId}
+          onClose={() => {
+            setShowDetails(false);
+            fetchUsers();
+          }}
+        />
+      )}
       <Table striped>
         <thead>
           <tr>
@@ -40,7 +43,18 @@ export default function PeopleTable({ params }: { params: Promise<{ cid: string 
             <tr key={user._id}>
               <td className="wd-full-name text-nowrap">
                 <FaUserCircle className="me-2 fs-1 text-secondary" />
-                <span className="wd-first-name">{user.firstName}</span>{" "}
+                <span className="wd-first-name">
+                  <Link
+                    href="#"
+                    className="text-decoration-none"
+                    onClick={() => {
+                      setShowDetails(true);
+                      setShowUserId(user._id);
+                    }}
+                  >
+                    {user.firstName}
+                  </Link>
+                </span>{" "}
                 <span className="wd-last-name">{user.lastName}</span>
               </td>
               <td className="wd-login-id">{user.loginId}</td>
