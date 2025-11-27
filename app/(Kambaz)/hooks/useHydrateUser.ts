@@ -27,7 +27,6 @@ export default function useHydrateUser() {
         dispatch(setCurrentUser(parsed));
       }
     } catch (err) {
-      console.error("Error hydrating user from localStorage", err);
     }
   }, [currentUser, dispatch]);
   

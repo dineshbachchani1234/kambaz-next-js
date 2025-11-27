@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { useDispatch, useSelector } from "react-redux";
-import { enrollUserInCourse, unenrollUserFromCourse, setEnrollments } from "../Enrollments/reducer";
+import { setEnrollments } from "../Enrollments/reducer";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button, Card, CardBody, CardImg, CardText, CardTitle, Col, Row, FormControl } from "react-bootstrap";
@@ -25,7 +25,6 @@ export default function Dashboard() {
       const enrollments = await client.findAllEnrollments();
       dispatch(setEnrollments(enrollments));
     } catch (error) {
-      console.error(error);
     }
   };
   
@@ -43,7 +42,6 @@ export default function Dashboard() {
         dispatch(setCourses(myCourses));
       }
     } catch (error) {
-      console.error(error);
       dispatch(setCourses([]));
     }
   };
@@ -59,11 +57,15 @@ export default function Dashboard() {
   const isFaculty = currentUser?.role === "FACULTY";
   
   const isEnrolled = (courseId: string) => {
-    return enrollments.some(
-      (enrollment: any) =>
-        enrollment.user === currentUser?._id &&
-        enrollment.course === courseId
+   
+    
+    const enrolled = enrollments.some(
+      (enrollment: any) => {
+        return enrollment.user === currentUser?._id && enrollment.course === courseId;
+      }
     );
+    
+    return enrolled;
   };
   
   const displayedCourses = courses;
@@ -72,9 +74,8 @@ export default function Dashboard() {
     if (!currentUser) return;
     try {
       await client.enrollUserInCourse(currentUser._id, courseId);
-      dispatch(enrollUserInCourse({ user: currentUser._id, course: courseId }));
+      await fetchEnrollments();  // Refresh from database
     } catch (error) {
-      console.error(error);
     }
   };
   
@@ -82,7 +83,7 @@ export default function Dashboard() {
     if (!currentUser) return;
     try {
       await client.unenrollUserFromCourse(currentUser._id, courseId);
-      dispatch(unenrollUserFromCourse({ user: currentUser._id, course: courseId }));
+      await fetchEnrollments();  // Refresh from database
     } catch (error) {
       console.error(error);
     }
