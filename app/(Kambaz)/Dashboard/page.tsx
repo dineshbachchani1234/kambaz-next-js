@@ -93,6 +93,7 @@ export default function Dashboard() {
     try {
       const newCourse = await client.createCourse(course);
       dispatch(setCourses([...courses, newCourse]));
+      await fetchEnrollments();
       
       setCourse({
         _id: "0", 

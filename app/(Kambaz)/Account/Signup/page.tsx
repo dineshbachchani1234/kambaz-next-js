@@ -9,7 +9,7 @@ import { setCurrentUser } from "../reducer";
 import * as client from "../client";
 
 export default function Signup() {
-  const [user, setUser] = useState<any>({});
+  const [user, setUser] = useState<any>({ role: "STUDENT" });
   const [verifyPassword, setVerifyPassword] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
@@ -24,7 +24,6 @@ export default function Signup() {
       const currentUser = await client.signup(user);
       dispatch(setCurrentUser(currentUser));
       
-      // Save to localStorage
       if (typeof window !== "undefined") {
         window.localStorage.setItem("kanbas-current-user", JSON.stringify(currentUser));
       }
@@ -64,11 +63,21 @@ export default function Signup() {
         <Form.Control
           type="password"
           placeholder="verify password"
-          className="mb-3"
+          className="mb-2"
           value={verifyPassword}
           onChange={(e) => setVerifyPassword(e.target.value)}
           onKeyPress={handleKeyPress}
         />
+        <Form.Select
+          className="mb-3"
+          value={user.role || "STUDENT"}
+          onChange={(e) => setUser({ ...user, role: e.target.value })}
+        >
+          <option value="STUDENT">Student</option>
+          <option value="FACULTY">Faculty</option>
+          <option value="ADMIN">Admin</option>
+          <option value="TA">TA</option>
+        </Form.Select>
         <Button 
           variant="primary" 
           className="w-100 mb-2"
